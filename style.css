@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.button {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  z-index: 3;
+  background-size: contain;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  transform: scale(1.2);
+}
+#play {
+  background-image: url(play.png);
+  right: 5vw;
+}
+#pause {
+  background-image: url(pause.png);
+  right: 0;
+}
+#road {
+  position: absolute;
+  bottom: 0;
+  width: 200vw;
+  height: 60vh;
+  background-image: url(road.jpg);
+  background-repeat: repeat-x;
+  background-size: 100vw 60vh;
+  animation: background linear 6s infinite;
+  animation-play-state: paused;
+}
+#sky {
+  position: absolute;
+  top: 0;
+  width: 200vw;
+  height: 40vh;
+  background-image: url(sky.jpg);
+  background-repeat: repeat-x;
+  background-size: 100vw 65vh;
+  animation: background linear 12s infinite;
+  animation-play-state: paused;
+}
+#player {
+  position: absolute;
+  top: 40vh;
+  left: 2rem;
+  z-index: 3;
+}
+#motorbike {
+  position: relative;
+  z-index: 1;
+  width: 16.5rem;
+  height: 16.5rem;
+  background-image: url(motorbike.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: motorbike ease-in-out 0.3s infinite;
+  animation-play-state: paused;
+}
+.wheel {
+  position: relative;
+  z-index: -1;
+  width: 4rem;
+  height: 4rem;
+}
+#wheel-front {
+  top: -4rem;
+  left: 12.5rem;
+  background-image: url(wheel.png);
+  background-size: 4rem 4rem;
+  background-repeat: no-repeat;
+  animation: wheel linear 1.2s infinite;
+  animation-play-state: paused;
+}
+#wheel-back {
+  top: -8rem;
+  left: 3rem;
+  background-image: url(wheel.png);
+  background-size: 4rem 4rem;
+  background-repeat: no-repeat;
+  animation: wheel linear 1s infinite;
+  animation-play-state: paused;
+}
+#dog {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  z-index: 3;
+  top: 33vh;
+  left: -20vw;
+  background-image: url(dog.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: dog 8.4s infinite linear;
+  animation-delay: 3s;
+  animation-play-state: paused;
+}
+#car {
+  position: absolute;
+  width: 35rem;
+  height: 35rem;
+  z-index: 4;
+  top: 50vh;
+  left: -70vw;
+  background-image: url(car.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: car 14.5s infinite linear;
+  animation-delay: 7s;
+  animation-play-state: paused;
+}
+#pedestrian {
+  position: absolute;
+  width: 17rem;
+  height: 17rem;
+  z-index: 5;
+  top: 61vh;
+  left: -10vw;
+  background-image: url(pedestrian.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: pedestrian 7.1s infinite linear;
+  animation-delay: 2s;
+  animation-play-state: paused;
+}
+
+/* background animation */
+@keyframes background {
+  100% {
+    transform: translate(-100vw);
+  }
+}
+/* motorbike vibrate animation */
+@keyframes motorbike {
+  50% {
+    transform: translateY(0.1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+/* wheel spinning animation */
+@keyframes wheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*dog animation*/
+@keyframes dog {
+  0% {
+    transform: translate(120vw);
+  }
+  100% {
+    transform: translate(-20vw);
+  }
+}
+/*car animation*/
+@keyframes car {
+  0% {
+    transform: translate(170vw);
+  }
+  100% {
+    transform: translate(-70vw);
+  }
+}
+/*pedestrian animation*/
+@keyframes pedestrian {
+  0% {
+    transform: translate(110vw);
+  }
+  100% {
+    transform: translate(-10vw);
+  }
+}

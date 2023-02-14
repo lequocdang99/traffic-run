@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" onkeydown="moving()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Traffic Run</title>
+  </head>
+  <body>
+    <div id="game">
+      <div class="button" id="play" onclick="start()"></div>
+      <div class="button" id="pause" onclick="pause()"></div>
+      <div id="pedestrian"></div>
+      <div id="car"></div>
+      <div id="dog"></div>
+      <div id="player">
+        <div id="motorbike"></div>
+        <div class="wheel" id="wheel-front"></div>
+        <div class="wheel" id="wheel-back"></div>
+      </div>
+      <div id="sky"></div>
+      <div id="road"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
